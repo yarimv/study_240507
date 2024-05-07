@@ -49,7 +49,7 @@ class 현금흐름(unittest.TestCase):
             self.test_name = sys._getframe().f_code.co_name
             self.assertEqual(result, "pass")
             print(f"{self.test_name}: pass")
-            self.final_result = {self.test_name : "pass"} # 딕셔너리 형태로
+            self.final_result = {self.test_name : "pass"} # 딕셔너리 형태로 저장
         except AssertionError as e:
             print(f"{self.test_name}: fail 기대결과 맞지않음")
             self.final_result = {self.test_name : "fail"}
