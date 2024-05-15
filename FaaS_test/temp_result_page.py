@@ -103,29 +103,29 @@ for item in response_data:
 
 # 결과 출력
 print(product_info_dict)
-
-#_______________________________________________________________
-#화면상에서 특정 태그의 값만 추출하기
-import requests
-from bs4 import BeautifulSoup
-
-# URL 설정
-url = "https://www.finda.co.kr/faas/kjb-default/"
-
-# GET 요청 보내고 응답 받기
-response = requests.get(url)
-
-# 응답이 성공적인지 확인
-if response.status_code == 200:
-    # BeautifulSoup 객체 생성
-    soup = BeautifulSoup(response.content, 'html.parser')
-
-    # 원하는 요소를 찾아서 내용을 출력
-    target_element = soup.find('p', class_='font-13 text-fgray-400')
-    if target_element:
-        extracted_text = target_element.text
-        print("추출된 내용:", extracted_text)
-    else:
-        print("해당 요소를 찾을 수 없습니다.")
-else:
-    print("페이지를 가져오는 데 문제가 발생했습니다. 상태 코드:", response.status_code)
+#
+# #_______________________________________________________________
+# #화면상에서 특정 태그의 값만 추출하기
+# import requests
+# from bs4 import BeautifulSoup
+#
+# # URL 설정
+# url = "https://www.finda.co.kr/faas/kjb-default/"
+#
+# # GET 요청 보내고 응답 받기
+# response = requests.get(url)
+#
+# # 응답이 성공적인지 확인
+# if response.status_code == 200:
+#     # BeautifulSoup 객체 생성
+#     soup = BeautifulSoup(response.content, 'html.parser')
+#
+#     # 원하는 요소를 찾아서 내용을 출력
+#     target_element = soup.find('p', class_='font-13 text-fgray-400')
+#     if target_element:
+#         extracted_text = target_element.text
+#         print("추출된 내용:", extracted_text)
+#     else:
+#         print("해당 요소를 찾을 수 없습니다.")
+# else:
+#     print("페이지를 가져오는 데 문제가 발생했습니다. 상태 코드:", response.status_code)
