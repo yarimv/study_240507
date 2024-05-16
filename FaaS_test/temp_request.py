@@ -7,16 +7,14 @@ import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-
+applicationId = '473'
 # API 엔드포인트 URL
-url = "https://service-api.finda.co.kr/ams/v1/loanmanage/loans?cache=false&source=mainHome"
+url = f'http://stg-eks-backend-internal.findainsight.co.kr/faas-api/v1/application/{applicationId}'
 
-# x-auth 헤더 값
-auth_token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzE1NTgyNiwiZXhwIjoxNzQ2MTY2NTQxLCJpYXQiOjE3MTQ2MzA1NDF9.qG9it6v57F2tmq0NJvWDHmBB2KDKw-dGS1dC2mw0iIE"
 
 # 요청 헤더 설정
 headers = {
-    "x-auth": auth_token
+"user-id": "1000000000001"
 }
 
 

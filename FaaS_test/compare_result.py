@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-
+from extract_productname_response import ApiValue
 
 #화면에 노출되는 상품리스트
 # example_result.html 파일을 읽어와서 BeautifulSoup 객체로 파싱합니다.
@@ -23,8 +23,17 @@ print(a)
 
 #api 에서 반환된 상품 리스트
 
-b = ['장기카드대출(카드론)', '하나원큐비상금대출',  '가계신용대출(즉시대출)','JB 위풍당당 대출']
 
+api_value = ApiValue()
+application_API_Response = api_value.callApplication(473, 1000000000001)
+product_names_in_API_Response = api_value.extractProductFromApiResponse(application_API_Response)
+print("product_names_in_API_Response: ", product_names_in_API_Response)
+
+b = product_names_in_API_Response
+
+
+
+# 두 리스트 비교
 if len(a) != len(b):
     print("두 리스트는 요소의 개수가 다릅니다.")
 else:
