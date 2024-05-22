@@ -8,10 +8,6 @@ import json
 
 
 
-
-
-
-
 response_text = '''
 {
     "status": 200,

@@ -8,7 +8,7 @@ class ApiValue:
 
 #product 추출하기
     def callApplication(self, applicaitonId, userId):
-        # request 를 이용한 api 응답 받기
+        # 결과 상품리스트 api 응답 받기
 
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -71,7 +71,7 @@ class ApiValue:
 
 if __name__ == '__main__':
     api_value = ApiValue()
-    application_API_Response = api_value.callApplication(473, 1000000000001)
+    application_API_Response = api_value.callApplication(1236, 1000000000008)
     product_names_in_API_Response = api_value.extractProductFromApiResponse(application_API_Response)
     print("product_names_in_API_Response: ", product_names_in_API_Response)
 
