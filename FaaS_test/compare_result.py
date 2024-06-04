@@ -9,7 +9,7 @@ with open("example_result.html", "r", encoding="utf-8") as file:
 soup = BeautifulSoup(html_content, "html.parser")
 
 # 클래스가 "font-13 text-fgray-400"인 모든 <p> 태그를 찾습니다.
-paragraphs = soup.find_all("p", class_="font-13 text-fgray-400")
+paragraphs = soup.find_all('p', class_='text-[0.8125rem] font-medium leading-[1.1375rem] tracking-[-0.02em] text-uniqueGray-50')
 
 # 추출된 <p> 태그의 텍스트 내용을 출력합니다.
 a = []
@@ -17,7 +17,7 @@ for paragraph in paragraphs:
     print(paragraph.get_text())
     a.append(paragraph.get_text())
 
-print(a)
+print("a:",a)
 
 
 
@@ -25,7 +25,7 @@ print(a)
 
 
 api_value = ApiValue()
-application_API_Response = api_value.callApplication(473, 1000000000001)
+application_API_Response = api_value.callApplication(643, 1000000000023)
 product_names_in_API_Response = api_value.extractProductFromApiResponse(application_API_Response)
 print("product_names_in_API_Response: ", product_names_in_API_Response)
 

@@ -71,7 +71,7 @@ class ApiValue:
 
 if __name__ == '__main__':
     api_value = ApiValue()
-    application_API_Response = api_value.callApplication(1236, 1000000000008)
+    application_API_Response = api_value.callApplication(643, 1000000000023)
     product_names_in_API_Response = api_value.extractProductFromApiResponse(application_API_Response)
     print("product_names_in_API_Response: ", product_names_in_API_Response)
 
